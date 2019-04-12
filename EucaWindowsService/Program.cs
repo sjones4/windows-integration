@@ -163,7 +163,7 @@ namespace Com.Eucalyptus.Windows.EucaWindowsService
                 {
                      if (File.Exists(xenPVFile))
                     {
-                        if (EucaFileUtil.Unzip(_installLocation, xenPVFile))
+                        if (EucaFileUtil.Unzip(_installLocation, xenPVFile).Length > 0)
                         {
                             ;
                         }
@@ -194,7 +194,7 @@ namespace Com.Eucalyptus.Windows.EucaWindowsService
                 {
                     if (File.Exists(virtioFile))
                     {
-                        if (EucaFileUtil.Unzip(_installLocation, virtioFile))
+                        if (EucaFileUtil.Unzip(_installLocation, virtioFile).Length > 0)
                         {
                             string[] paths = Directory.GetDirectories(virtioDir);
                             if (paths != null && paths.Length > 0)
